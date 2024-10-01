@@ -4,42 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Про мене - Мрачковський Олександр</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" />
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 50px auto;
-            padding: 20px;
+            padding: 30px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
-            color: #4CAF50;
+            color: #2C3E50;
+            font-size: 36px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .photo {
+            flex: 1 1 250px;
+            max-width: 300px;
+            margin-right: 20px;
+        }
+        .photo img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .info {
+            flex: 2 1 450px;
         }
         p {
             font-size: 18px;
             line-height: 1.6;
+            margin-bottom: 15px;
         }
-        .info {
-            margin-top: 20px;
+        .contact, .hobby {
+            margin-top: 30px;
+        }
+        .contact h2, .hobby h2 {
+            font-size: 28px;
+            color: #2980B9;
+            margin-bottom: 10px;
+        }
+        .contact p, .hobby p {
+            font-size: 18px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #2980B9;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .social-icons a:hover {
+            background-color: #1A5276;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Про мене</h1>
-        <div class="info">
-            <p>Привіт! Мене звати <strong>Мрачковський Олександр</strong>.</p>
-            <p>Я живу в місті <strong>Кам'янець-Подільський</strong>.</p>
-            <p>Навчаюся на третьому курсі в <strong>Кам'янець-Подільському національному університеті імені Івана Огієнка</strong>.</p>
-            <p>Закінчив 9 класів школи №15 та <strong>Кам'янець-Подільський фаховий коледж харчової промисловості НУХТ</strong>.</p>
+        <div class="content">
+            <div class="photo">
+                <img src="https://via.placeholder.com/300x400" alt="Моє фото">
+            </div>
+            <div class="info">
+                <p>Привіт! Мене звати <strong>Мрачковський Олександр</strong>.</p>
+                <p>Я живу в місті <strong>Кам'янець-Подільський</strong>.</p>
+                <p>Навчаюся на третьому курсі в <strong>Кам'янець-Подільському національному університеті імені Івана Огієнка</strong>.</p>
+                <p>Закінчив 9 класів школи №15 та <strong>Кам'янець-Подільський фаховий коледж харчової промисловості НУХТ</strong>.</p>
+            </div>
+        </div>
+        <div class="contact">
+            <h2>Контактна інформація</h2>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>Телефон: +38 (XXX) XXX-XX-XX</p>
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="hobby">
+            <h2>Хобі</h2>
+            <p>У вільний час я люблю займатися спортом, подорожувати та читати науково-фантастичні книги. Також мені подобається грати у настільні ігри з друзями.</p>
         </div>
     </div>
 </body>
