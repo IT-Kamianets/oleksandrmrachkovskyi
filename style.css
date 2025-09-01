@@ -1,121 +1,228 @@
+* {
+  margin: 0;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e9f5ff;
-    color: #333;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d9d9d9;
+  color: #333;
+}
+
+a {
+  color: black;
+}
+
+h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+hr {
+  width: 250px;
+  margin: 0 15px;
 }
 
 .container {
-    max-width: 900px;
-    margin: 25px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
 }
 
-h1 {
-    text-align: center;
-    color: #34495e;
-    font-size: 36px;
+.profile {
+  display: flex;
+  flex-direction: row;
+  padding: 0 50px;
+  min-height: 450px;
+  height: auto;
 }
 
-.content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.bio {
+  margin: auto 0;
+  padding: 20px;
 }
 
-.photo {
-    flex: 1 1 250px;
-    max-width: 300px;
-    margin-right: 20px;
-}
-
-.photo img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.bio p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .info {
-    flex: 2 1 450px;
-    background-color: #f4f9ff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: row;
+  padding: 0 50px;
+  color: #fff;
+  background-color: #3c6e71;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+.left-column {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 370px;
+  font-size: 18px;
 }
 
-.contact,
-.hobby {
-    margin-top: 30px;
+.profile img {
+  width: 100%;
 }
 
-.contact h2,
-.hobby h2 {
-    font-size: 28px;
-    color: #2e86c1;
-    margin-bottom: 10px;
+.left-column a {
+  color: #fff;
 }
 
-.contact p,
-.hobby p {
-    font-size: 18px;
+.contacts img {
+  height: 25px;
+  vertical-align: middle;
 }
 
-.social-icons {
-    display: flex;
-    gap: 10px;
+.contacts,
+.education,
+.skills {
+  padding: 15px;
 }
 
-.social-icons a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.right-column {
+  display: flex;
+  flex-direction: column;
 }
 
-.social-icons a:hover {
-    transform: scale(1.1);
+.info .left-column {
+  background-color: #2d5658;
 }
 
-.social-icons a.instagram {
-    background-color: #e4405f;
+.experience {
+  padding: 20px;
 }
 
-.social-icons a.linkedin {
-    background-color: #0077b5;
+p,
+li {
+  padding: 5px 0;
+  font-size: 18px;
 }
 
-.social-icons a.github {
-    background-color: #0d1117;
-}
-
-.social-icons i {
-    margin-right: 8px;
-}
-
-/* Додаткові кольори для хобі */
-.hobby {
-    background-color: #dff9fb;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+footer {
+  background-color: #3c6e71;
 }
 
 footer p {
-    margin: 0;
-    padding: 0;
-    padding-top: 10px;
+  margin: 10px auto;
+  width: max-content;
+}
+
+@media (max-width: 600px) {
+  .profile,
+  .info {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .profile img {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+  }
+
+  hr {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .info {
+    padding: 20px;
+  }
+
+  .contacts img {
+    height: 20px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .profile {
+    flex-direction: row;
+    padding: 30px;
+  }
+
+  .left-column {
+    flex: 0 0 40%;
+  }
+
+  .right-column {
+    flex: 1;
+  }
+
+  .profile img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .info {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+  }
+
+  hr {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
